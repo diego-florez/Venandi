@@ -4,8 +4,11 @@ import os
 from dotenv import load_dotenv
 import time
 from math import ceil
-from mongodb import addProfile
-from constants import countries, followers
+#from mongodb import addProfile
+from src.constants import countries, followers, seniority_dict
+import pandas as pd
+
+
 
 def getFromGithub(path, params):
     load_dotenv()
@@ -25,6 +28,7 @@ def getFromGithub(path, params):
     
     # Extract json from body response
     return res.json()
+
 
 
 def getUsers(countries, followers):
@@ -80,6 +84,7 @@ def getUsers(countries, followers):
                         users.append(r["login"])
 
     return list(set(users)), count_hour
+
 
 
 def getInfo(countries, followers):
@@ -153,5 +158,30 @@ def getInfo(countries, followers):
 
 
 
+def getBySeniority(seniority):
+    followers = seniority_dict["followers"][seniority]
+    repos = seniority_dict["repos"][seniority]
+    return followers, repos
 
-print(getInfo(countries, followers))
+
+
+def requestUsers(location, language, followers, repos):
+    users = getFromGithub("search/users?", f"q=location:{location}+language:{language}+followers:{followers}+repos:{repos}&per_page=100")["items"]
+    login = []
+    for u in users:
+        login.append(u["login"])
+    user_info = []
+    for l in login:
+        user = getFromGithub(f"users/{l}","")
+        profile = {"1. Name":user["name"], "2. Company":user["company"], "3. Location":user["location"], "4. Email":user["email"], "5. Hireable":user["hireable"], 
+                    "6. Number of Repositories":user["public_repos"], "7. Number of Followers":user["followers"], "8. Account Created at":user["created_at"], "9. Account Updated at":user["updated_at"]}
+        user_info.append(profile)
+    return {n:d for n,d in enumerate(user_info)}
+
+
+
+def reqUser(user):
+    user = getFromGithub(f"users/{user}","")
+    profile = {"repos":user["public_repos"], "followers":user["followers"]}
+    return pd.DataFrame(profile, index=[0])
+

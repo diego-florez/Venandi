@@ -1,4 +1,4 @@
-from config import db
+from src.config import db
 
 def addProfile(user):
     coll = db["profiles"]

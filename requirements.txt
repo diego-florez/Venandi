@@ -1,0 +1,6 @@
+flask
+python-dotenv
+dnspython
+pandas
+sklearn
+requests

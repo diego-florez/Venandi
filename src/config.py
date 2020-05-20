@@ -1,9 +1,12 @@
-from pymongo import MongoClient
+#from pymongo import MongoClient
 import os
 import dotenv
 dotenv.load_dotenv()
 
 #MongoDB
-MGURL = os.getenv("MGURL")
+"""MGURL = os.getenv("MGURL")
 myclient = MongoClient(f"{MGURL}")
-db = myclient["test"]
+db = myclient["github"]"""
+
+#Local Connection
+PORT = os.getenv("PORT")
