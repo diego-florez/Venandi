@@ -6,4 +6,4 @@ dotenv.load_dotenv()
 #MongoDB
 MGURL = os.getenv("MGURL")
 myclient = MongoClient(f"{MGURL}")
-db = myclient["github"]
+db = myclient["test"]

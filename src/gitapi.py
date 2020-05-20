@@ -39,7 +39,7 @@ def getUsers(countries, followers):
                 print("paradita")
                 time.sleep(61)                      
                 counter = 0
-            elif 4990 <= count_hour <= 5000:
+            elif 4975 <= count_hour <= 5000:
                 print("paradita")
                 time.sleep(3601)                      
                 count_hour = 0
@@ -53,7 +53,7 @@ def getUsers(countries, followers):
                         print("paradita")
                         time.sleep(61)                   
                         counter = 0
-                    elif 4990 <= count_hour <= 5000:
+                    elif 4975 <= count_hour <= 5000:
                         print("paradita")
                         time.sleep(3601)                      
                         count_hour = 0
@@ -70,7 +70,7 @@ def getUsers(countries, followers):
                         print("paradita")
                         time.sleep(61)                     
                         counter = 0
-                    elif 4990 <= count_hour <= 5000:
+                    elif 4975 <= count_hour <= 5000:
                         print("paradita")
                         time.sleep(3601)                      
                         count_hour = 0
@@ -95,7 +95,7 @@ def getInfo(countries, followers):
             print("paradita")
             time.sleep(61)                      
             counter = 0
-        elif 4990 <= count_hour <= 5000:
+        elif 4975 <= count_hour <= 5000:
             print("paradita")
             time.sleep(3601)                      
             count_hour = 0
@@ -109,7 +109,7 @@ def getInfo(countries, followers):
                     print("paradita")
                     time.sleep(61)                      
                     counter = 0
-                elif 4990 <= count_hour <= 5000:
+                elif 4975 <= count_hour <= 5000:
                     print("paradita")
                     time.sleep(3601)                      
                     count_hour = 0
@@ -134,7 +134,7 @@ def getInfo(countries, followers):
                     print("paradita")
                     time.sleep(61)                      
                     counter = 0
-                elif 4990 <= count_hour <= 5000:
+                elif 4975 <= count_hour <= 5000:
                     print("paradita")
                     time.sleep(3601)                      
                     count_hour = 0
