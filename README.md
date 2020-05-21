@@ -26,7 +26,7 @@ To fulfill the previous goals the next steps have been done:
 - Also, to show the API functionality I deployed in Heroku, except the Linkedin part
 
 ## 4 Final Output:
-The final output is an API that is able to find Github users based in their seniority and also to predict their seniority by giving the user nickname/login (the funcionality of obtaining the Linkedin user link wasn't deployed due to lack of time, but will be soon)
+The final output is an API that is able to find Github users based in their seniority and also to predict their seniority by giving the user nickname/login (the funcionality of obtaining the Linkedin user link wasn't deployed due to lack of time, but will be soon, however you can see how it works in calls.ipynb, at the end)
 
 ## How it works:
 - Go to https://venandi.herokuapp.com
