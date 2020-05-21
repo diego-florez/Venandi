@@ -35,7 +35,7 @@ The final output is an API that is able to find Github users based in their seni
   - Location Options: any
   - Language: any programming language
   - Seniority: junior, middle, senior, principal and architect
-Ex: https://venandi.herokuapp.com/user/madrid/javasript/principal/get
+- Ex: https://venandi.herokuapp.com/user/madrid/javasript/principal/get
   
 - Finally delete the previous command and add this one: /user/<login>/predict, to predict the user seniority by giving the nickname/login of an user
-Ex: https://venandi.herokuapp.com/user/diego-florez/predict
+- Ex: https://venandi.herokuapp.com/user/diego-florez/predict
