@@ -4,3 +4,5 @@ dnspython
 pandas
 sklearn
 requests
+bleach
+selenium

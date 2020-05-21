@@ -2,6 +2,7 @@ from flask import Flask, request
 from src.config import PORT
 from src.gitapi import getBySeniority, requestUsers
 from src.predict import predictUser
+from src.scraper import getLinks
 
 app = Flask(__name__)
 
@@ -26,6 +27,7 @@ def searchUser(location, language, seniority):
 @app.route("/user/<login>/predict", methods=["GET"])
 def recommend(login):
     seniority = predictUser(login)
-    return seniority
+    links = getLinks(login)
+    return {"Github Seniority":seniority, "Linkedin Profile Link & could happen Social Media links":links}
     
 

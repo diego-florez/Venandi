@@ -180,9 +180,10 @@ def requestUsers(location, language, followers, repos):
 
 
 
-def reqUser(user):
-    user = getFromGithub(f"users/{user}","")
+def reqUser(login):
+    user = getFromGithub(f"users/{login}","")
     profile = {"repos":user["public_repos"], "followers":user["followers"]}
     name = user["name"]
-    return pd.DataFrame(profile, index=[0]), name
+    location = user["location"]
+    return pd.DataFrame(profile, index=[0]), name, location
 
