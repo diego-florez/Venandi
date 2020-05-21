@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 import time
 from math import ceil
-#from mongodb import addProfile
+#from mongodb import addProfile --> (we let it commented as we won't use it after the seniority classes are found)
 from src.constants import countries, followers, seniority_dict
 import pandas as pd
 
@@ -183,5 +183,6 @@ def requestUsers(location, language, followers, repos):
 def reqUser(user):
     user = getFromGithub(f"users/{user}","")
     profile = {"repos":user["public_repos"], "followers":user["followers"]}
-    return pd.DataFrame(profile, index=[0])
+    name = user["name"]
+    return pd.DataFrame(profile, index=[0]), name
 

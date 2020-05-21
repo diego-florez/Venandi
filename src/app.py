@@ -9,8 +9,11 @@ app = Flask(__name__)
 @app.route("/")
 def baseResponse():
     return {
-        "hola cabron": f"que te follen"
-        }
+        "Hello welcome to Venandi! This API has 2 basic tasks": 
+        {
+        "1":{"Find Github users by location, programming language and seniority: to perform this query use the following command": "/user/<location>/<language>/<seniority>/get"}, 
+        "2":{"Predict the seniority of the selected user": "to perform this query use the following command: /user/<login>/predict"}
+        }}
 
 @app.route("/user/<location>/<language>/<seniority>/get", methods=["GET"])
 def searchUser(location, language, seniority):

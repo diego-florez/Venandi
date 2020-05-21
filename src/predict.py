@@ -14,8 +14,9 @@ y = df.label
 rf_model = RandomForestClassifier().fit(X, y)
 
 def predictUser(user):
-    rf_pred = rf_model.predict(reqUser(user))
+    chars, name = reqUser(user)
+    rf_pred = rf_model.predict(chars)
     for e in rf_pred:
         seniority = labels_dict[e]
-        return seniority
+        return {name:seniority}
 

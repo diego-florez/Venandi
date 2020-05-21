@@ -10,7 +10,7 @@ countries = ["taiwan"]
 #ranges of followers to request
 followers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13..14", "15..17", "18..20", "21..25", "26..35", "36..50", "51..99", ">100"]
 
-
+#we use it to request github api with the parameters given from flask
 seniority_dict = {
     "followers": {
         "junior":"0..7",
@@ -28,7 +28,7 @@ seniority_dict = {
     }
 }
 
-
+#we use it to show the predicted sionirity of the requested user
 labels_dict= {
     0:"junior",
     1:"middle",
