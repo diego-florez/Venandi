@@ -48,4 +48,5 @@ The final output is an API that is able to find Github users based in their seni
   - Sklearn: clustering data (K Means) & and multiclass algos (Esemble Methods, Vector Methods, Neighbors, etc)
   - Flask: web connection
   - Selenium: Linkedin links scraping
-  
+  - Docker Image: upload Venandi to Heroku
+  - Heroku
