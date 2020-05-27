@@ -40,7 +40,7 @@ The final output is an API that is able to find Github users based in their seni
 - Finally delete the previous command and add this one: /user/<login>/predict, to predict the user seniority by giving the nickname/login of an user
 - Ex: https://venandi.herokuapp.com/user/diego-florez/predict
   
-  ## Promgramming language, main modules & tools:
+  ## Programming language, main modules & tools:
   - Language: Python
   - Requests, json: Github API (data extraction)
   - MongoDB: saving pre-classification sample
