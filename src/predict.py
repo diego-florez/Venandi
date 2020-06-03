@@ -10,7 +10,7 @@ df = pd.read_csv("OUTPUT/final_df.csv")
 X = df[["repos_number", "followers"]]
 y = df.label
 
-#fit the choosed model
+#fit the chosed model
 rf_model = RandomForestClassifier().fit(X, y)
 
 def predictUser(login):
