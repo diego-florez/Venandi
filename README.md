@@ -31,22 +31,22 @@ The final output is an API that is able to find Github users based in their seni
 ## How it works:
 - Go to https://venandi.herokuapp.com
 
-- Add the following command to the previous url: /user/<location>/<language>/<seniority>/get, and replace location, language and seniority
+- Add the following command to the previous url: /user/location/language/seniority/get, and replace location, language and seniority
   - Location Options: any
   - Language: any programming language
   - Seniority: junior, middle, senior, principal and architect
 - Ex: https://venandi.herokuapp.com/user/madrid/javascript/principal/get
   
-- Finally delete the previous command and add this one: /user/<login>/predict, to predict the user seniority by giving the nickname/login of an user
+- Finally delete the previous command and add this one: /user/login/predict, to predict the user seniority by giving the nickname/login of an user
 - Ex: https://venandi.herokuapp.com/user/diego-florez/predict
   
   ## Programming language, main modules & tools:
   - Language: Python
-  - Requests, json: Github API (data extraction)
-  - MongoDB: saving pre-classification sample
+  - Requests, json: GitHub API (data extraction)
+  - MongoDB: saving pre-classified sample
   - Pandas, Numpy, Matplotlib, Seaborn & Plotly: Data wrangling, descritiptive analytics & visualization
   - Sklearn: clustering data (K Means, PCA, t-SNE) and multiclass algos (Esemble Methods, Vector Methods, Neighbors, etc)
   - Flask: web connection
-  - Selenium: Linkedin links scraping
+  - Selenium: LinkedIn links scraping
   - Docker Image: upload Venandi to Heroku
   - Heroku
